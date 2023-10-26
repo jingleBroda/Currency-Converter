@@ -32,6 +32,8 @@ class CurrencyRecViewAdapter(
         diffResults.dispatchUpdatesTo(this)
     }
 
+    override fun getItemList(): List<Pair<String, Float>> = items
+
     override fun onClick(v: View) {
         when(v.id) {
             R.id.openChart-> listener.invoke(v.tag as String)
