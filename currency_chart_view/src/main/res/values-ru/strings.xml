@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="present_value_string">Текущее значение = %s</string>
+    <string name="present_date_string">Дата = %s</string>
+    <string name="ox_chart_name">Дата</string>
+    <string name="oy_chart_name">Курс</string>
+</resources>

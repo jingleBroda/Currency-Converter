@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CurrencyChart">
+        <attr name = "chartColor" format = "color"/>
+        <attr name = "borderChartColor" format = "color"/>
+        <attr name = "dotChartColor" format = "color"/>
+        <attr name = "maxValueChartColor" format = "color"/>
+        <attr name = "minValueChartColor" format = "color"/>
+        <attr name = "textChartColor" format = "color"/>
+    </declare-styleable>
+    <attr name = "currencyChartFieldStyle" format = "reference"/>
+</resources>

@@ -1,0 +1,3 @@
+<resources>
+    <style name="CurrencyConverterAppStyle" parent="Theme.CurrencyConverter"/>
+</resources>

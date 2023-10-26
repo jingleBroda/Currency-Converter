@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/top_item_border"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/otherCurrencyFlag"
+        app:layout_constraintStart_toStartOf="@+id/selectedCurrencyFlag"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/selectedCurrencyFlag"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/swapButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openChart"
+        app:srcCompat="@drawable/flag_of_europe" />
+
+    <ImageView
+        android:id="@+id/otherCurrencyFlag"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/swapButton"
+        app:layout_constraintTop_toTopOf="@+id/selectedCurrencyFlag"
+        app:srcCompat="@drawable/flag_of_the_usa" />
+
+    <ImageButton
+        android:id="@+id/swapButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/selectedCurrencyFlag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/selectedCurrencyFlag"
+        app:srcCompat="@drawable/rotation_ic" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/selectedCurrencyNumb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_item_border"
+        app:layout_constraintEnd_toEndOf="@+id/selectedCurrencyFlag"
+        app:layout_constraintStart_toStartOf="@+id/selectedCurrencyFlag"
+        app:layout_constraintTop_toBottomOf="@+id/selectedCurrencyFlag">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/selectedCurrencyNumbTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberDecimal"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            tools:hint="EUR" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otherCurrencyNumb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/black"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/selectedCurrencyNumb"
+        app:layout_constraintEnd_toEndOf="@+id/otherCurrencyFlag"
+        app:layout_constraintStart_toStartOf="@+id/otherCurrencyFlag"
+        app:layout_constraintTop_toTopOf="@+id/selectedCurrencyNumb">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otherCurrencyNumbTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            tools:hint="USD" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/equalText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="@string/equals_string"
+        app:layout_constraintBottom_toBottomOf="@+id/selectedCurrencyNumb"
+        app:layout_constraintEnd_toStartOf="@+id/otherCurrencyNumb"
+        app:layout_constraintStart_toEndOf="@+id/selectedCurrencyNumb"
+        app:layout_constraintTop_toTopOf="@+id/selectedCurrencyNumb" />
+
+    <View
+        android:id="@+id/bottom_item_border"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/otherCurrencyFlag"
+        app:layout_constraintStart_toStartOf="@+id/selectedCurrencyFlag" />
+
+    <ImageButton
+        android:id="@+id/openChart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/open_chart_button_background"
+        app:layout_constraintEnd_toEndOf="@+id/top_item_border"
+        app:layout_constraintTop_toBottomOf="@+id/top_item_border"
+        app:srcCompat="@drawable/ic_chart" />
+</androidx.constraintlayout.widget.ConstraintLayout>

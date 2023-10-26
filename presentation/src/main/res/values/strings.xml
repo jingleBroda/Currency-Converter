@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name" translatable="false">Currency-Converter</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="equals_string" translatable="false">=</string>
+    <string name="error_message">Error, not internet connection!</string>
+</resources>

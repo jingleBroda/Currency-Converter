@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="present_value_string">Present value = %s</string>
+    <string name="present_date_string">Date = %s</string>
+    <string name="ox_chart_name">Date</string>
+    <string name="oy_chart_name">Rates</string>
+</resources>
